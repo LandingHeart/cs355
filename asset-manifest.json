@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/shinan-cs355/static/css/main.4423e5d1.chunk.css",
+    "main.js": "/shinan-cs355/static/js/main.632cbfae.chunk.js",
+    "main.js.map": "/shinan-cs355/static/js/main.632cbfae.chunk.js.map",
+    "runtime-main.js": "/shinan-cs355/static/js/runtime-main.fa25dee0.js",
+    "runtime-main.js.map": "/shinan-cs355/static/js/runtime-main.fa25dee0.js.map",
+    "static/js/2.8b163934.chunk.js": "/shinan-cs355/static/js/2.8b163934.chunk.js",
+    "static/js/2.8b163934.chunk.js.map": "/shinan-cs355/static/js/2.8b163934.chunk.js.map",
+    "index.html": "/shinan-cs355/index.html",
+    "precache-manifest.1330b05040527109f09edcf52b38c388.js": "/shinan-cs355/precache-manifest.1330b05040527109f09edcf52b38c388.js",
+    "service-worker.js": "/shinan-cs355/service-worker.js",
+    "static/css/main.4423e5d1.chunk.css.map": "/shinan-cs355/static/css/main.4423e5d1.chunk.css.map",
+    "static/js/2.8b163934.chunk.js.LICENSE.txt": "/shinan-cs355/static/js/2.8b163934.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fa25dee0.js",
+    "static/js/2.8b163934.chunk.js",
+    "static/css/main.4423e5d1.chunk.css",
+    "static/js/main.632cbfae.chunk.js"
+  ]
+}
