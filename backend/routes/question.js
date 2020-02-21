@@ -33,6 +33,7 @@ router.get("/", async (req, res) => {
 //     res.json({ msg: err });
 //   }
 // });
+
 router.post("/add", async (req, res) => {
   const question = new Questions({
     title: req.body.title,
