@@ -16,12 +16,12 @@ app.use(cookieparser());
 app.use(cors());
 const questionModel = require("./routes/question");
 
-app.use("/question", questionModel);
+app.use("/questions", questionModel);
 
 mongoose.connect(
-    process.env.DB_CONNECTION,
-    { useNewUrlParser: true, useUnifiedTopology: true,  },
-    () => console.log("connected to port " + port)
-  );
-  
+  process.env.DB_CONNECTION,
+  { useNewUrlParser: true, useUnifiedTopology: true },
+  () => console.log("connected to port " + port)
+);
+
 app.listen(port);

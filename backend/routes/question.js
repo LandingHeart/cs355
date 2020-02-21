@@ -11,7 +11,7 @@ router.get("/", async (req, res) => {
   } catch (err) {
     res.json({ message: error });
   }
-});
+}); 
 
 // router.get("/:bookingId", async (req, res) => {
 //   try {
