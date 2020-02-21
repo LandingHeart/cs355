@@ -11,7 +11,8 @@ router.get("/", async (req, res) => {
   } catch (err) {
     res.json({ message: error });
   }
-}); 
+  console.log();
+});
 
 // router.get("/:bookingId", async (req, res) => {
 //   try {
@@ -32,5 +33,22 @@ router.get("/", async (req, res) => {
 //     res.json({ msg: err });
 //   }
 // });
+router.post("/add", async (req, res) => {
+  const question = new Questions({
+    title: req.body.title,
+    a: req.body.a,
+    b: req.body.b,
+    c: req.body.c,
+    d: req.body.d,
+    ans: req.body.ans,
+    id: req.body.id
+  });
+  try {
+    const saveQuestion = await question.save();
+    res.json(saveQuestion);
+  } catch (err) {
+    res.json({ message: err });
+  }
+});
 
 module.exports = router;

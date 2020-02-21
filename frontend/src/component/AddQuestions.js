@@ -4,28 +4,46 @@ export default class AddQuestions extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      questions: []
+      questions: [],
+      user: "me"
     };
   }
-  componentDidMount(){
-      fetch('/questions')
-        .then(res => res.json())
-        .then(questions => this.setState({questions}))
-        .catch(err => console.log(err));
+  componentDidMount() {
+    fetch("http://localhost:8080/questions")
+      .then(response => {
+        if (response.status === 200) {
+          //   const json = await response.json();
+          //   console.log(json);
+          return response.json();
+        } else if (response.status === 408) {
+          console.log("SOMETHING WENT WRONG");
+        }
+      })
+      .then(questions => this.setState({ questions }))
+      .catch(err => console.log(err));
+
+    console.log(this.state);
   }
   render() {
-    const data = this.state.questions.map(item => {
-      <div className="content" key={item.id}>
-        <p>{item.title}</p>
-        <p>{item.choiceA}</p>
-        <p>{item.choiceB}</p>
-        <p>{item.choiceC}</p>
-        <p>{item.ans}</p>
-      </div>;
-    });
+    let { questions } = this.state;
     return (
       <div>
-        <ul>{data}</ul>
+        {questions.map(item => (
+          <div
+            key={item.id}
+            className="container"
+            style={{ color: "black", backgroundColor: "gray" }}
+          >
+            <p>{item.title}</p>
+            <p>A {item.a}</p>
+            <p>B {item.b}</p>
+            <p>C {item.c}</p>
+            <p>D {item.d}</p>
+          </div>
+        ))}
+        <p>{this.state.user}</p>
+
+        {console.log(this.state.questions)}
       </div>
     );
   }

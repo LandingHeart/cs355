@@ -5,16 +5,28 @@ const QuestionSchema = mongoose.Schema({
     type: String,
     require: true
   },
-  choiceA: {
+  a: {
     type: String,
     require: true
   },
-  choiceB: {
+  b: {
     type: String,
     require: true
   },
-  choiceC: {
+  c: {
     type: String,
+    require: true
+  },
+  d: {
+    type: String,
+    require: true
+  },
+  ans: {
+    type: String,
+    require: true
+  },
+  id: {
+    type: Number,
     require: true
   }
 });
