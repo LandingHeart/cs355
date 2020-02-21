@@ -15,6 +15,18 @@ app.use(bodyParser.json());
 app.use(cookieparser());
 app.use(cors());
 const questionModel = require("./routes/question");
+app.use(express.static("public"));
+
+// ...your code
+
+// serves frontend application
+// app.get("/*", (req, res) => {
+//   res.sendFile(path.resolve("public/index.html"), { root: __dirname }, err => {
+//     if (err) {
+//       res.status(500).send(err);
+//     }
+//   });
+// });
 
 app.use("/questions", questionModel);
 
