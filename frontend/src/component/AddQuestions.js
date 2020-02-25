@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import "./addQuestion.css";
+import "./questionDisplay.css";
 export default class AddQuestions extends Component {
   constructor(props) {
     super(props);
     this.state = {
-     
       user: null,
       title: "",
       a: "",
@@ -17,7 +16,6 @@ export default class AddQuestions extends Component {
       intervalId: ""
     };
   }
-
 
   handleChange = e => {
     const { value, name } = e.target;
@@ -61,9 +59,19 @@ export default class AddQuestions extends Component {
     let { title, a, b, c, d, ans } = this.state;
     return (
       <div>
-        <div className="container">
+        <div
+          className="container"
+          style={{
+            backgroundColor: "white",
+            width: "700px",
+            padding: "50px",
+            boxShadow: "3px 3px 5px 6px #ccc",
+            marginTop: "10px"
+          }}
+        >
+          <h1> Enter your Questions </h1>
           <form type="submit" onSubmit={this.handlSubmit}>
-            <div >
+            <div>
               <div className="form-group">
                 <label> Enter questions</label>
                 <input
@@ -130,7 +138,6 @@ export default class AddQuestions extends Component {
             </div>
           </form>
         </div>
-       
 
         {console.log(this.state.questions)}
       </div>
