@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import "./addQuestion.css";
 export default class AddQuestions extends Component {
   constructor(props) {
     super(props);
@@ -20,7 +20,6 @@ export default class AddQuestions extends Component {
   componentDidUpdate() {}
 
   componentDidMount() {
-    // setInterval(this.fetchData(), 1000);
     let intervalId = setInterval(() => this.fetchData(), 3000);
     this.setState({
       intervalId: intervalId
@@ -86,9 +85,9 @@ export default class AddQuestions extends Component {
     let { title, a, b, c, d, ans } = this.state;
     return (
       <div>
-        <div className="form-content">
-          <form className="submit" type="submit" onSubmit={this.handlSubmit}>
-            <div className="container">
+        <div className="form-content" className="container">
+          <form type="submit" onSubmit={this.handlSubmit}>
+            <div >
               <div className="form-group">
                 <label> Enter questions</label>
                 <input

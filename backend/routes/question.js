@@ -14,25 +14,14 @@ router.get("/", async (req, res) => {
   console.log();
 });
 
-// router.get("/:bookingId", async (req, res) => {
-//   try {
-//     const bookings = await Booking.findById(req.params.bookingId);
-//     res.json(bookings);
-//   } catch (err) {
-//     res.json({ message: error });
-//   }
-// });
-
-// //route to pass in the customerid and find
-// // {this.state.customerName}
-// router.get("/:customerid", async (req, res) => {
-//   try {
-//     const customerId = Booking.findById(req.params.customerId);
-//     res.json(customerId);
-//   } catch (err) {
-//     res.json({ msg: err });
-//   }
-// });
+router.get("/:questionID", async (req, res) => {
+  try {
+    const questionID = Questions.findById(req.params.questionID);
+    res.json(questionID);
+  } catch (err) {
+    res.json({ msg: err });
+  }
+});
 
 router.post("/add", async (req, res) => {
   const question = new Questions({
