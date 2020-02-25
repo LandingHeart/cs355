@@ -26,6 +26,9 @@ export class Navbar extends Component {
                 <Link className="navbar-brand" href="#" to="/">
                   HOME
                 </Link>
+                <Link className="navbar-item" href="#" to="/questions">
+                  TopIQ Questionaire
+                </Link>
                 <li className="nav-item dropdown">
                   <a
                     className="nav-link"
