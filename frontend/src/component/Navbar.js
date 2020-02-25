@@ -4,7 +4,7 @@ export class Navbar extends Component {
   render() {
     return (
       <div>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
           <div className="container">
             <button
               className="navbar-toggler"
@@ -26,8 +26,8 @@ export class Navbar extends Component {
                 <Link className="navbar-brand" href="#" to="/">
                   HOME
                 </Link>
-                <Link className="navbar-item" href="#" to="/questions">
-                  TopIQ Questionaire
+                <Link className="nav-link" role="button" to="/questions">
+                  TOPIQ
                 </Link>
                 <li className="nav-item dropdown">
                   <a
@@ -79,7 +79,6 @@ export class Navbar extends Component {
                         window.open("https://www.w3schools.com", "_blank")
                       }
                     >
-                      {" "}
                       W3School
                     </Link>
                   </div>

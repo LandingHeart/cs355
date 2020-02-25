@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import "./questionDisplay.css";
 export default class DisplayQuestions extends Component {
   constructor(props) {
     super(props);
@@ -8,7 +8,8 @@ export default class DisplayQuestions extends Component {
     };
   }
   componentDidMount() {
-    let intervalId = setInterval(() => this.fetchData(), 3000);
+    this.fetchData();
+    let intervalId = setInterval(() => this.fetchData(), 10000);
     this.setState({
       intervalId: intervalId
     });
@@ -33,7 +34,7 @@ export default class DisplayQuestions extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="container question-list">
         {this.state.questions.map(item => (
           <div key={item.id}>
             <div
@@ -44,16 +45,14 @@ export default class DisplayQuestions extends Component {
                 marginTop: "20px"
               }}
             >
-              <div style={{}}>
-                <div className="card-body">
-                  <h5 className="card-title">
-                    {item.id}. {item.title}
-                  </h5>
-                  <p className="cart-text">A {item.a}</p>
-                  <p className="cart-text">B {item.b}</p>
-                  <p className="cart-text"> C {item.c}</p>
-                  <p className="cart-text"> D {item.d}</p>
-                </div>
+              <div className="card-body">
+                <h5 className="card-title">
+                  {item.id}. {item.title}
+                </h5>
+                <p className="card-text">A {item.a}</p>
+                <p className="card-text">B {item.b}</p>
+                <p className="card-text"> C {item.c}</p>
+                <p className="card-text"> D {item.d}</p>
               </div>
             </div>
           </div>
