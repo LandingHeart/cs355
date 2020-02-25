@@ -36,24 +36,23 @@ export default class DisplayQuestions extends Component {
     return (
       <div className="container question-list">
         {this.state.questions.map(item => (
-          <div key={item.id}>
-            <div
-              className="card container"
-              style={{
-                width: "80%",
-                justifyContent: "center",
-                marginTop: "20px"
-              }}
-            >
-              <div className="card-body">
-                <h5 className="card-title">
-                  {item.id}. {item.title}
-                </h5>
-                <p className="card-text">A {item.a}</p>
-                <p className="card-text">B {item.b}</p>
-                <p className="card-text"> C {item.c}</p>
-                <p className="card-text"> D {item.d}</p>
-              </div>
+          <div
+            className="card container"
+            key={item.id}
+            style={{
+              width: "80%",
+              justifyContent: "center",
+              marginTop: "20px"
+            }}
+          >
+            <div className="card-body">
+              <h5 className="card-title">
+                {item.id}. {item.title}
+              </h5>
+              <p className="card-text">A {item.a}</p>
+              <p className="card-text">B {item.b}</p>
+              <p className="card-text"> C {item.c}</p>
+              <p className="card-text"> D {item.d}</p>
             </div>
           </div>
         ))}
