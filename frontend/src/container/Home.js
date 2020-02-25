@@ -2,6 +2,6 @@ import React, { Component } from "react";
 import "./home.css";
 export default class Home extends Component {
   render() {
-    return <div className="img">djkfakjfd;aksfj asdlfkjaskdlfj</div>;
+    return <div className="img"></div>;
   }
 }
