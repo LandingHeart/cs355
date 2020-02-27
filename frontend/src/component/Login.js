@@ -1,6 +1,7 @@
 import React, { Component } from "react";
+import Form from "./Form";
 
-export default class Form extends Component {
+export default class Login extends Component {
   render() {
     return (
       <div>
@@ -15,7 +16,7 @@ export default class Form extends Component {
               padding: "30px"
             }}
           >
-            <h1 className="">{this.props.children}</h1>
+            <h1 className="">Login</h1>
             <div class="form-group" style={{ marginTop: "50px" }}>
               <label for="exampleInputEmail1">Email address</label>
               <input

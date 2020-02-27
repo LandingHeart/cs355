@@ -172,6 +172,12 @@ export class Navbar extends Component {
                     </Link>
                   </div>
                 </li>
+                
+                <li className="nav-item">
+                  <Link className="nav-link" to="/login" role="button">
+                    Login
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
