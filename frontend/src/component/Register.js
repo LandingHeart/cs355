@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./form.css";
 
 export default class Register extends Component {
   constructor(props) {
@@ -17,7 +18,7 @@ export default class Register extends Component {
   handleChange = e => {
     const { value, name } = e.target;
     this.setState({
-      [value]: name
+      [name]: value
     });
   };
   render() {
@@ -36,38 +37,40 @@ export default class Register extends Component {
               }}
             >
               <h1 className="">Register</h1>
-              <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
+              <div className="form-group">
+                <label for="exampleInputPassword1">username</label>
                 <input
                   type="username"
-                  class="form-control"
+                  className="form-control"
                   id="exampleInputPassword1"
                   name="username"
                   value={this.state.username}
+                  onChange={this.handleChange}
                 />
               </div>
-              <div class="form-group" style={{ marginTop: "40px" }}>
+              <div class="form-group">
                 <label for="exampleInputEmail1">Email address</label>
                 <input
                   type="email"
-                  class="form-control"
+                  className="form-control"
                   id="exampleInputEmail1"
                   aria-describedby="emailHelp"
                   name="email"
                   value={this.state.email}
+                  onChange={this.handleChange}
                 />
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Password</label>
                 <input
                   type="password"
-                  class="form-control"
+                  className="form-control"
                   id="exampleInputPassword1"
                   name="password"
                   value={this.state.password}
+                  onChange={this.handleChange}
                 />
               </div>
-
               <button type="submit" class="btn btn-primary">
                 Submit
               </button>
