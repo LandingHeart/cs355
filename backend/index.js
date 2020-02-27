@@ -9,27 +9,26 @@ const router = express.Router();
 const port = 8080;
 
 //middleware, function when routes are hit
+const withAuth = require("./middleware");
 
+router.get("/checkToken", withAuth, function(req, res) {
+  res.sendStatus(200);
+});
+
+router.get("/api/secret", withAuth, function(req, res) {
+  res.send("password");
+});
+const questionModel = require("./routes/question");
+const customerModel = require("./routes/customers");
 require("dotenv/config");
 app.use(bodyParser.json());
 app.use(cookieparser());
 app.use(cors());
-const questionModel = require("./routes/question");
+
 app.use(express.static("public"));
 
-// ...your code
-
-// serves frontend application
-// app.get("/*", (req, res) => {
-//   res.sendFile(path.resolve("public/index.html"), { root: __dirname }, err => {
-//     if (err) {
-//       res.status(500).send(err);
-//     }
-//   });
-// });
-
 app.use("/questions", questionModel);
-
+app.use("customers", customerModel);
 mongoose.connect(
   process.env.DB_CONNECTION,
   { useNewUrlParser: true, useUnifiedTopology: true },
