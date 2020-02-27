@@ -5,6 +5,7 @@ export default class Register extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      id: 1,
       email: "",
       firstname: "",
       lastname: "",
@@ -18,7 +19,7 @@ export default class Register extends Component {
   onSubmit = event => {
     event.preventDefault();
 
-    fetch("/customers/users")
+    fetch("/customers")
       .then(res => {
         if (res.status === 200) {
           return res.json();
@@ -28,6 +29,7 @@ export default class Register extends Component {
         const size = data.length;
 
         const obj = {
+          id: this.size,
           email: this.state.email,
           firstname: this.state.firstname,
           lastname: this.state.lastname,

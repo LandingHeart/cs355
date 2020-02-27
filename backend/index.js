@@ -28,7 +28,7 @@ app.use(cors());
 app.use(express.static("public"));
 
 app.use("/questions", questionModel);
-app.use("customers", customerModel);
+app.use("/customers", customerModel);
 mongoose.connect(
   process.env.DB_CONNECTION,
   { useNewUrlParser: true, useUnifiedTopology: true },

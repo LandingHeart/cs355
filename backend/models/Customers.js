@@ -5,6 +5,10 @@ const SECRET = "mynameis";
 const jwt = require("jsonwebtoken");
 
 const CustomersSchema = mongoose.Schema({
+  id: {
+    type: Number,
+    required: true
+  },
   email: {
     type: String,
     required: true

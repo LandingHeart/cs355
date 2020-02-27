@@ -48,24 +48,26 @@ export class Navbar extends Component {
                     className="dropdown-menu"
                     aria-labelledby="navbarDropdown"
                   >
-                    <Link
+                    <a
+                      href="/"
                       className="dropdown-item"
                       onClick={() =>
                         window.open("https://www.zybooks.com/", "_blank")
                       }
                     >
                       ZyBook
-                    </Link>
-                    <Link
+                    </a>
+                    <a
+                      href="/"
                       className="dropdown-item"
-                      href="#"
                       onClick={() =>
                         window.open("http://www.tophat.com", "_blank")
                       }
                     >
                       TopHat
-                    </Link>
-                    <Link
+                    </a>
+                    <a
+                      href="/"
                       className="dropdown-item"
                       onClick={() =>
                         window.open(
@@ -75,22 +77,23 @@ export class Navbar extends Component {
                       }
                     >
                       Course Google Drive
-                    </Link>
-                    <Link
+                    </a>
+                    <a
+                      href="/"
                       className="dropdown-item"
                       onClick={() =>
                         window.open("https://www.w3schools.com", "_blank")
                       }
                     >
                       W3School
-                    </Link>
+                    </a>
                   </div>
                 </li>
 
                 <li className="nav-item dropdown">
-                  <Link
+                  <a
+                    href="/"
                     className="nav-link"
-                    href="#"
                     id="navbarDropdown"
                     role="button"
                     data-toggle="dropdown"
@@ -99,24 +102,24 @@ export class Navbar extends Component {
                     to="/about"
                   >
                     About
-                  </Link>
+                  </a>
                   <div
                     className="dropdown-menu"
                     aria-labelledby="navbarDropdown"
                   >
-                    <Link to="/about" className="dropdown-item" href="#">
+                    <Link to="/about" className="dropdown-item">
                       About Developer
                     </Link>
-                    <Link className="dropdown-item" href="#">
+                    <a href="/" className="dropdown-item">
                       Contact
-                    </Link>
+                    </a>
                   </div>
                 </li>
 
                 <li className="nav-item dropdown">
-                  <Link
+                  <a
                     className="nav-link"
-                    href="#"
+                    href="/"
                     id="navbarDropdown"
                     role="button"
                     data-toggle="dropdown"
@@ -124,34 +127,34 @@ export class Navbar extends Component {
                     aria-expanded="false"
                   >
                     Browser
-                  </Link>
+                  </a>
                   <div
                     className="dropdown-menu"
                     aria-labelledby="navbarDropdown"
                   >
-                    <Link className="dropdown-item" href="#">
+                    <a className="dropdown-item" href="/">
                       Navigator
-                    </Link>
-                    <Link className="dropdown-item" href="#">
+                    </a>
+                    <a className="dropdown-item" href="/">
                       Window
-                    </Link>
-                    <div className="dropdown-item"></div>
-                    <Link className="dropdown-item" href="#">
+                    </a>
+                    <div className="dropdown-item" href="/"></div>
+                    <a className="dropdown-item" href="/">
                       Screen
-                    </Link>
-                    <Link className="dropdown-item" href="#">
+                    </a>
+                    <a className="dropdown-item" href="/">
                       Location
-                    </Link>
-                    <Link className="dropdown-item" href="#">
+                    </a>
+                    <a className="dropdown-item" href="/">
                       Geolocation
-                    </Link>
+                    </a>
                   </div>
                 </li>
 
                 <li className="nav-item dropdown">
-                  <Link
+                  <a
                     className="nav-link"
-                    href="#"
+                    href="/"
                     id="navbarDropdown"
                     role="button"
                     data-toggle="dropdown"
@@ -159,20 +162,20 @@ export class Navbar extends Component {
                     aria-expanded="false"
                   >
                     Search
-                  </Link>
+                  </a>
                   <div
                     className="dropdown-menu"
                     aria-labelledby="navbarDropdown"
                   >
-                    <Link className="dropdown-item" href="#">
+                    <a className="dropdown-item" href="/">
                       From File
-                    </Link>
-                    <Link className="dropdown-item" href="#">
+                    </a>
+                    <a className="dropdown-item" href="/">
                       Course Google Drive
-                    </Link>
+                    </a>
                   </div>
                 </li>
-                
+
                 <li className="nav-item">
                   <Link className="nav-link" to="/login" role="button">
                     Login

@@ -23,9 +23,10 @@ router.get("/:customerId", async (req, res) => {
   }
 });
 router.post("/api/register", async (req, res) => {
-  const { email, firstname, lastname, username, password } = req.body;
+  const { id, email, firstname, lastname, username, password } = req.body;
 
   const customer = new Customer({
+    id,
     email,
     firstname,
     lastname,
