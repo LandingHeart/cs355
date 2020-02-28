@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./questionDisplay.css";
+// import "./questionDisplay.css";
 export default class AddQuestions extends Component {
   constructor(props) {
     super(props);
@@ -62,7 +62,7 @@ export default class AddQuestions extends Component {
         <div
           className="container"
           style={{
-            backgroundColor: "white",
+           
             width: "700px",
             padding: "50px",
             boxShadow: "3px 3px 5px 6px #ccc",

@@ -11,13 +11,13 @@ export default function Routes() {
   return (
     <div>
       <Switch>
-        <Route exact path="/" component={Home}></Route>
+        {/* <Route exact path="/" component={Home}></Route>
         <Route path="/about" component={About}></Route>
         <Route path="/questions" component={DisplayQuestionContainer}></Route>
         <Route path="/login" component={Login}></Route>
         <Route path="/register" component={Register}></Route>
         <Route path="/addQuestions" component={AddQuestions}></Route>
-        <Route path="/contact"></Route>
+        <Route path="/contact"></Route> */}
       </Switch>
     </div>
   );
