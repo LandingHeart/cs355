@@ -23,13 +23,13 @@ export class Navbar extends Component {
               id="navbarSupportedContent"
             >
               <ul className="navbar-nav mx-auto">
-                <Link className="navbar-brand" href="#" to="/">
+                <Link className="navbar-brand" to="/">
                   HOME
                 </Link>
                 <Link className="navbar-item nav-link" to="/questions">
                   TOPIQ
                 </Link>
-                <Link className="navbar-item nav-link" to="/addQuestions">
+                <Link className="navbar-item nav-link" to="/addQuestion">
                   add questions
                 </Link>
                 <li className="nav-item dropdown">

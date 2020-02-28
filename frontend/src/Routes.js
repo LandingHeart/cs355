@@ -1,24 +1,22 @@
-import React from "react";
-import { Switch, Route } from "react-router-dom";
-import About from "./component/About";
-import DisplayQuestionContainer from "./container/DisplayQuestionContainer";
-import AddQuestions from "./component/AddQuestions";
-import Home from "./container/Home";
+import React, { Component } from "react";
 import Login from "./component/Login";
 import Register from "./component/Register";
-
-export default function Routes() {
-  return (
-    <div>
-      <Switch>
-        {/* <Route exact path="/" component={Home}></Route>
-        <Route path="/about" component={About}></Route>
-        <Route path="/questions" component={DisplayQuestionContainer}></Route>
-        <Route path="/login" component={Login}></Route>
-        <Route path="/register" component={Register}></Route>
-        <Route path="/addQuestions" component={AddQuestions}></Route>
-        <Route path="/contact"></Route> */}
-      </Switch>
-    </div>
-  );
+import AddQuestions from "./component/AddQuestions";
+import DisplayQuestion from "./component/DisplayQuestions";
+import { Switch, Route } from "react-router-dom";
+import Home from "./container/Home";
+export default class Routes extends Component {
+  render() {
+    return (
+      <div>
+        <Switch>
+          <Route exact path="/" component={Home}></Route>
+          <Route exact path="/login" component={Login}></Route>
+          <Route exact path="/register" component={Register}></Route>
+          <Route exact path="/addQuestion" component={AddQuestions} />
+          <Route exact path="/questions" component={DisplayQuestion}></Route>
+        </Switch>
+      </div>
+    );
+  }
 }
