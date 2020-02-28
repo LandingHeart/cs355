@@ -20,13 +20,14 @@ router.get("/api/secret", withAuth, function(req, res) {
 });
 const questionModel = require("./routes/question");
 const customerModel = require("./routes/customers");
+const courseModel = require("./routes/course");
 require("dotenv/config");
 app.use(bodyParser.json());
 app.use(cookieparser());
 app.use(cors());
 
 app.use(express.static("public"));
-
+app.use("/courses", courseModel);
 app.use("/questions", questionModel);
 app.use("/customers", customerModel);
 mongoose.connect(

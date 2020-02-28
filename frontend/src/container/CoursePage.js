@@ -5,19 +5,32 @@ export default class CoursePage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      id: "",
       coursename: []
     };
   }
-componentDidMount(){
-    fetch('/courses')
-        .then()
-}
+  componentDidMount() {
+    fetch("/courses")
+      .then(res => {
+        if (res.status === 200) {
+          return res.json();
+        } else {
+          console.log("error");
+        }
+      })
+      .then(coursename => this.setState({ coursename }))
+      .catch(err => console.log(err));
+  }
   render() {
-    return (
-      <div>
-        <Course course={this.state.coursename} />
-      </div>
-    );
+    const names = this.state.coursename.map(item => {
+      return (
+        <Course
+          key={item.courseid}
+          courseid={item.coursename}
+          coursename={item.coursename}
+        />
+      );
+    });
+
+    return <div>{names}</div>;
   }
 }
