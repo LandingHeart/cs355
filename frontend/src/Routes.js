@@ -5,6 +5,7 @@ import AddQuestions from "./component/AddQuestions";
 import DisplayQuestion from "./component/DisplayQuestions";
 import { Switch, Route } from "react-router-dom";
 import Home from "./container/Home";
+import CoursePage from "./container/CoursePage";
 export default class Routes extends Component {
   render() {
     return (
@@ -15,6 +16,7 @@ export default class Routes extends Component {
           <Route exact path="/register" component={Register}></Route>
           <Route exact path="/addQuestion" component={AddQuestions} />
           <Route exact path="/questions" component={DisplayQuestion}></Route>
+          <Route exact path = "/courses" component = {CoursePage}></Route>
         </Switch>
       </div>
     );

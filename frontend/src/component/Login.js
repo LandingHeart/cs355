@@ -84,7 +84,7 @@ export default class Login extends Component {
       })
       .then(user => {
         // this.props.setUser(user);
-        this.props.history.push("/questions");
+        this.props.history.push("/courses");
 
         console.log("success");
       })

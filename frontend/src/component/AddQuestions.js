@@ -62,19 +62,18 @@ export default class AddQuestions extends Component {
         <div
           className="container"
           style={{
-           
             width: "700px",
             padding: "50px",
             boxShadow: "3px 3px 5px 6px #ccc",
-            marginTop: "10px"
+            margin: "10px auto"
           }}
         >
           <h1> Enter your Questions </h1>
           <form type="submit" onSubmit={this.handlSubmit}>
             <div>
               <div className="form-group">
-                <label> Enter questions</label>
                 <input
+                  placeholder="Enter questions"
                   className="form-control"
                   type="text"
                   name="title"
@@ -83,8 +82,8 @@ export default class AddQuestions extends Component {
                 />
               </div>
               <div className="form-group">
-                <label> Enter answer A</label>
                 <input
+                  placeholder=" Enter answer A"
                   className="form-control"
                   type="text"
                   name="a"
@@ -93,8 +92,8 @@ export default class AddQuestions extends Component {
                 />
               </div>
               <div className="form-group">
-                <label> Enter answer B</label>
                 <input
+                  placeholder="Enter answer B"
                   className="form-control"
                   type="text"
                   name="b"
@@ -103,8 +102,8 @@ export default class AddQuestions extends Component {
                 />
               </div>
               <div className="form-group">
-                <label> Enter answer C</label>
                 <input
+                  placeholder="Enter answer C"
                   className="form-control"
                   type="text"
                   name="c"
@@ -113,8 +112,8 @@ export default class AddQuestions extends Component {
                 />
               </div>
               <div className="form-group">
-                <label> Enter answer D</label>
                 <input
+                  placeholder="Enter answer D"
                   className="form-control"
                   type="text"
                   name="d"
@@ -123,8 +122,8 @@ export default class AddQuestions extends Component {
                 />
               </div>
               <div className="form-group">
-                <label> Enter answer </label>
                 <input
+                  placeholder="Enter answer"
                   className="form-control"
                   type="text"
                   name="ans"
