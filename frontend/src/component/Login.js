@@ -20,7 +20,8 @@ export default class Login extends Component {
               height: "320px",
               boxShadow: "3px 3px 5px 6px #ccc",
               marginTop: "50px",
-              padding: "30px"
+              padding: "30px",
+              backgroundColor: "white"
             }}
           >
             <h1 className="">Login</h1>

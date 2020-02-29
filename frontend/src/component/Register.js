@@ -70,7 +70,8 @@ export default class Register extends Component {
                 height: "450px",
                 boxShadow: "3px 3px 5px 6px #ccc",
                 marginTop: "20px",
-                padding: "30px"
+                padding: "30px",
+                backgroundColor: "white"
               }}
             >
               <h1 className="">Register</h1>

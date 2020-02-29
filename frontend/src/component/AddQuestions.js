@@ -26,7 +26,7 @@ export default class AddQuestions extends Component {
   handlSubmit = e => {
     e.preventDefault();
     this.addNewQuestions();
-    console.log(this.state)
+    console.log(this.state);
   };
   async addNewQuestions() {
     const obj = {
@@ -65,8 +65,9 @@ export default class AddQuestions extends Component {
           style={{
             width: "700px",
             padding: "50px",
-            boxShadow: "3px 3px 5px 6px #ccc",
-            margin: "10px auto"
+            boxShadow: "3px 3px 5px 6px #cccc",
+            margin: "10px auto",
+            backgroundColor: "white"
           }}
         >
           <h1> Enter your Questions </h1>
