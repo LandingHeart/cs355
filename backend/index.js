@@ -24,7 +24,7 @@ const courseModel = require("./routes/course");
 require("dotenv/config");
 
 mongoose.connect(
-  process.env.DB_CONNECTION,
+  process.env.MONGOD_URI,
   { useNewUrlParser: true, useUnifiedTopology: true },
   () => console.log("connected to port " + port)
 );
