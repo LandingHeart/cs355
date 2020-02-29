@@ -21,16 +21,29 @@ export default class CoursePage extends Component {
       .catch(err => console.log(err));
   }
   render() {
-    const names = this.state.coursename.map(item => {
+    const mycard = this.state.coursename.map(item => {
       return (
-        <Course
-          key={item.courseid}
-          courseid={item.coursename}
-          coursename={item.coursename}
-        />
+        <div
+          className="card"
+          style={{
+            width: "18rem",
+            display: "flex",
+            float: "left",
+
+            margin: "20px"
+          }}
+        >
+          <div className="card-body">
+            <Course
+              key={item.courseid}
+              courseid={item.coursename}
+              coursename={item.coursename}
+            />
+          </div>
+        </div>
       );
     });
 
-    return <div>{names}</div>;
+    return <div>{mycard}</div>;
   }
 }
