@@ -35,27 +35,45 @@ export default class DisplayQuestions extends Component {
   render() {
     return (
       <div className="container question-list">
-        {this.state.questions.map(item => (
-          <div
-            className="card container"
-            key={item.id}
-            style={{
-              width: "80%",
-              justifyContent: "center",
-              marginTop: "20px"
-            }}
-          >
-            <div className="card-body">
-              <h5 className="card-title">
-                {item.id}. {item.title}
-              </h5>
-              <p className="card-text">A {item.a}</p>
-              <p className="card-text">B {item.b}</p>
-              <p className="card-text"> C {item.c}</p>
-              <p className="card-text"> D {item.d}</p>
+        <form>
+          {this.state.questions.map(item => (
+            <div
+              className="card container"
+              key={item.id}
+              style={{
+                width: "80%",
+                justifyContent: "center",
+                marginTop: "20px"
+              }}
+            >
+              <div className="card-body">
+                <h4 className="card-title">
+                  {item.id}. {item.title}
+                </h4>
+
+                <label>
+                  <input type="radio" value="option1" checked={false} />A{" "}
+                  {item.a}
+                </label>
+                <br />
+                <label>
+                  <input type="radio" value="option1" checked={false} />B{" "}
+                  {item.b}
+                </label>
+                <br />
+                <label>
+                  <input type="radio" value="option1" checked={false} />C{" "}
+                  {item.c}
+                </label>
+                <br />
+                <label>
+                  <input type="radio" value="option1" checked={false} />D{" "}
+                  {item.d}
+                </label>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </form>
       </div>
     );
   }

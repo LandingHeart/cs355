@@ -14,3 +14,6 @@
 .question-list {
   margin-top: 50px;
 }
+label {
+  padding-right: 10px;
+}

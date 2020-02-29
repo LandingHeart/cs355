@@ -6,8 +6,8 @@ export default class Course extends Component {
     return (
       <div>
         <div>
-          <div className="cards">
-            <div className="card">
+          <div className="cards-container">
+            <div className="card-item">
               <h3 className="card-title">Course: {this.props.coursename}</h3>
               <Link to="/questions"> {this.props.coursename} </Link>
             </div>
