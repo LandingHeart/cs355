@@ -23,7 +23,7 @@ router.get("/:questionID", async (req, res) => {
   }
 });
 
-router.post("/register", async (req, res) => {
+router.post("/add", async (req, res) => {
   const question = new Questions({
     title: req.body.title,
     a: req.body.a,

@@ -8,8 +8,8 @@ export default class DisplayQuestions extends Component {
     };
   }
   componentDidMount() {
-    let intervalId  = this.fetchData();
-    // let intervalId = setInterval(() => this.fetchData(), 10000);
+    this.fetchData();
+    let intervalId = setInterval(() => this.fetchData(), 1000);
     this.setState({
       intervalId: intervalId
     });

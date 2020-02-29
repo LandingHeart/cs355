@@ -26,6 +26,7 @@ export default class AddQuestions extends Component {
   handlSubmit = e => {
     e.preventDefault();
     this.addNewQuestions();
+    console.log(this.state)
   };
   async addNewQuestions() {
     const obj = {
