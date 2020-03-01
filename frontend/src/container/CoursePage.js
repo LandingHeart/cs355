@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import Course from "../component/Course";
+import Header from "./Header";
 
 export default class CoursePage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      coursename: []
+      coursename: [],
+      user: ""
     };
   }
   componentDidMount() {
@@ -44,6 +46,12 @@ export default class CoursePage extends Component {
       );
     });
 
-    return <div>{mycard}</div>;
+    return (
+      <div>
+        <Header />
+        <hr />
+        {mycard}
+      </div>
+    );
   }
 }
