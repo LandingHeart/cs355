@@ -49,8 +49,10 @@ export default class CoursePage extends Component {
     return (
       <div>
         <Header />
-        <hr />
-        {mycard}
+        <div className="container">
+          <hr />
+          {mycard}
+        </div>
       </div>
     );
   }

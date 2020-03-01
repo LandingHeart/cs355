@@ -9,4 +9,16 @@ div.img {
   background-position: center;
   filter: opacity(70%);
 }
-    
+
+.header-content {
+  height: 220px;
+  padding-top: 80px;
+  background: rgb(27, 53, 75);
+  background: linear-gradient(
+    90deg,
+    rgba(27, 53, 75, 1) 0%,
+    rgba(27, 53, 75, 1) 100%
+  );
+  margin-bottom: 20px;
+  color: #fff;
+}

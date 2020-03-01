@@ -1,32 +1,12 @@
 import React from "react";
-
+import "./home.css";
 export default function Header() {
   return (
     <div>
-      <header
-        style={{
-          textAlign: "right",
-          backgroundColor: "#38556a",
-          paddingRight: "10px",
-          color: "black"
-        }}
-      >
-        <a href="/" className="nav-link">
-          Student
-        </a>
-      </header>
-      <div
-        className="header-content"
-        style={{
-          height: "200px",
-          width: "vw100",
-          backgroundColor: "#38556a",
-          paddingTop: "80px"
-        }}
-      >
+      <div className="header-content" style={{}}>
         <div className="container">
           <h1 className="text"> Your Courses</h1>
-          <h2>Queens College</h2>
+          <div>Queens College</div>
         </div>
       </div>
     </div>
