@@ -18,10 +18,10 @@ export default function Header() {
       <div
         className="header-content"
         style={{
-          height: "280px",
+          height: "200px",
           width: "vw100",
           backgroundColor: "#38556a",
-          paddingTop: "150px"
+          paddingTop: "80px"
         }}
       >
         <div className="container">
