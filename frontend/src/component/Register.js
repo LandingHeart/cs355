@@ -35,6 +35,7 @@ export default class Register extends Component {
       .then(res => {
         alert("success");
         let json = res.json();
+        this.props.history.push("/login");
         console.log(json);
       })
       .catch(err => console.log(err));
@@ -63,7 +64,7 @@ export default class Register extends Component {
             }}
           >
             <h1 className="">Register</h1>
-            <div class="form-group">
+            <div className="form-group">
               <input
                 type="firstname"
                 className="form-control"
@@ -74,7 +75,7 @@ export default class Register extends Component {
                 onChange={this.handleChange}
               />
             </div>
-            <div class="form-group">
+            <div className="form-group">
               <input
                 type="lastname"
                 className="form-control"
@@ -85,7 +86,7 @@ export default class Register extends Component {
                 onChange={this.handleChange}
               />
             </div>
-            <div class="form-group">
+            <div className="form-group">
               <input
                 type="email"
                 className="form-control"
@@ -109,7 +110,7 @@ export default class Register extends Component {
               />
             </div>
 
-            <div class="form-group">
+            <div className="form-group">
               <input
                 type="password"
                 placeholder="password"
