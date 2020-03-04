@@ -28,10 +28,10 @@ export default class CoursePage extends Component {
         <div
           className="card"
           style={{
-            width: "18rem",
+            width: "25rem",
             display: "flex",
+            flexDirection: "row",
             float: "left",
-
             margin: "20px"
           }}
         >
@@ -49,7 +49,7 @@ export default class CoursePage extends Component {
     return (
       <div>
         <Header />
-        <div className="container">
+        <div style={{ marginLeft: "55px" }}>
           <hr />
           {mycard}
         </div>
