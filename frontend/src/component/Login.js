@@ -14,7 +14,7 @@ export default class Login extends Component {
       <div>
         <form onSubmit={this.onSubmit}>
           <div
-            className="container"
+            className="container form-content"
             style={{
               width: "30%",
               height: "320px",

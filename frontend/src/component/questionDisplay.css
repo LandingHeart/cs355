@@ -1,11 +1,11 @@
 .card {
-  box-shadow: 2px 2px 4px 4px #ccc;
+  box-shadow: 2px 2px 4px 1px #ccc;
   min-height: 270px;
   width: 80vw;
   margin: 20px auto;
   padding: 10px;
   background: white;
-  border-radius: 5px;
+  border-radius: 0px;
 }
 
 .question-list {
