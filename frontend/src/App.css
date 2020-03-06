@@ -3,13 +3,12 @@
   --primary-color: #f2f2f2;
 }
 
-* {
-  font-family: "Roboto", sans-serif;
-}
 body {
   background-color: var(--primary-color);
   color: var(--main-color);
+  font-family: "Spartan", sans-serif;
+  /* font-family: "Roboto", sans-serif; */
 }
-.card {
-  font-size: 18px;
+p {
+  padding-bottom: 3px;
 }
