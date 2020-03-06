@@ -35,12 +35,14 @@ export default class CoursePage extends Component {
             margin: "20px"
           }}
         >
-          <div className="card-body">
-            <Course
-              key={item.courseid}
-              courseid={item.coursename}
-              coursename={item.coursename}
-            />
+          <div>
+            <div className="card-body">
+              <Course
+                key={item.courseid}
+                courseid={item.coursename}
+                coursename={item.coursename}
+              />
+            </div>
           </div>
         </div>
       );

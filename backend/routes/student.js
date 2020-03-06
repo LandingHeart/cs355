@@ -16,7 +16,7 @@ router.get("/users", async (req, res) => {
 
 router.get("/:studentId", async (req, res) => {
   try {
-    const students = await Student.findById(req.params.customerId);
+    const students = await Student.findById(req.params.studentId);
     res.json(students);
   } catch (err) {
     res.json({ message: err });
@@ -25,7 +25,7 @@ router.get("/:studentId", async (req, res) => {
 router.post("/api/register", async (req, res) => {
   const { id, email, firstname, lastname, username, password } = req.body;
 
-  const customer = new Customer({
+  const student = new Student({
     id,
     email,
     firstname,
@@ -33,11 +33,11 @@ router.post("/api/register", async (req, res) => {
     username,
     password
   });
-  console.log(customer);
+  console.log(Student);
   try {
-    const saveCustomer = await customer.save();
+    const saveStudent = await student.save();
     console.log("Aaa");
-    res.json(saveCustomer);
+    res.json(saveStudent);
   } catch (err) {
     console.log("err");
     res.json({ message: err });
@@ -48,7 +48,7 @@ router.post("/api/register", async (req, res) => {
 router.post("/api/auth", async (req, res) => {
   const { username, password } = req.body;
 
-  Customer.findOne({ username }, (err, user) => {
+  Student.findOne({ username }, (err, user) => {
     if (err) {
       console.log(err);
       res.status(500).json({
@@ -84,12 +84,12 @@ router.post("/api/auth", async (req, res) => {
   });
 });
 
-router.delete("/:customerId", async (req, res) => {
+router.delete("/:studentId", async (req, res) => {
   try {
-    const removeCustomers = await Customer.remove({
-      _id: req.params.customerId
+    const removeStudent = await Student.remove({
+      _id: req.params.studentId
     });
-    res.json(removeCustomers);
+    res.json(removeStudent);
   } catch (err) {
     res.json({ message: err });
   }
