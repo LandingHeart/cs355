@@ -50,7 +50,6 @@ export default class DisplayQuestions extends Component {
                 <h4 className="card-title">
                   {item.id}. {item.title}
                 </h4>
-
                 <label>
                   <input type="radio" value="option1" checked={false} />A{" "}
                   {item.a}
