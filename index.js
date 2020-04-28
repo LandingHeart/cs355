@@ -38,11 +38,12 @@ app.use("/questions", questionModel);
 app.use("/customers", customerModel);
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("/build"));
-  app.use("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "build", "index.html"));
-  });
+  app.use(express.static("frontend/build"));
 }
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"));
+});
+
 app.listen(port, () => {
   console.log(`Server running at PORT: ${port}`);
 });
