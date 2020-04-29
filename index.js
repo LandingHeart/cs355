@@ -15,7 +15,7 @@ router.get("/api/secret", withAuth, function (req, res) {
   res.send("password");
 });
 
-require("dotenv/config");
+require("dotenv").config();
 
 app.use(bodyParser.json());
 app.use(cookieparser());
@@ -41,7 +41,8 @@ mongoose.connect(
   process.env.MONGOD_URI ||
     "mongodb://admin:1shinigamisan@ds351628.mlab.com:51628/cs355",
   { useNewUrlParser: true, useUnifiedTopology: true },
-  () => console.log("connected to port " + port)
+  () =>
+    console.log("connected to port " + port + " uri " + process.env.MONGOD_URI)
 );
 app.listen(port, () => {
   console.log(`Server running at PORT: ${port}`);
