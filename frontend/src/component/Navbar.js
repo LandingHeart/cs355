@@ -29,7 +29,21 @@ export class Navbar extends Component {
                 <Link className="navbar-item nav-link" to="/questions">
                   TOPIQ
                 </Link>
-             
+                <li
+                  className="navbar-item nav-link"
+                  to="/questions"
+                  onClick={() =>
+                    window.open(
+                      "https://ssologin.cuny.edu/cuny.html?resource_url=https%3A%2F%2Fbbhosted.cuny.edu%252Fwebapps%252Flogin%252Fnoportal",
+                      "_blank"
+                    )
+                  }
+                >
+                  BLACKBOARD
+                </li>
+                {/* <Link className="navbar-item nav-link" to="/addQuestion">
+                  add questions
+                </Link> */}
                 <li className="nav-item dropdown">
                   <a
                     className="nav-link"
@@ -105,12 +119,12 @@ export class Navbar extends Component {
                     className="dropdown-menu"
                     aria-labelledby="navbarDropdown"
                   >
-                    <Link to="/about" className="dropdown-item">
+                    <Link to="/developer" className="dropdown-item">
                       About Developer
                     </Link>
-                    <a href="/" className="dropdown-item">
+                    <Link to="/about" className="dropdown-item">
                       Contact
-                    </a>
+                    </Link>
                   </div>
                 </li>
 
@@ -150,17 +164,6 @@ export class Navbar extends Component {
                 </li>
 
                 <li className="nav-item dropdown">
-                  <a
-                    className="nav-link"
-                    href="/"
-                    id="navbarDropdown"
-                    role="button"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    Search
-                  </a>
                   <div
                     className="dropdown-menu"
                     aria-labelledby="navbarDropdown"
