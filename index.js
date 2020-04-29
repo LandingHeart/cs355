@@ -31,7 +31,8 @@ app.use("/courses", courseModel);
 app.use("/questions", questionModel);
 app.use("/customers", customerModel);
 mongoose.connect(
-  process.env.MONGOD_URI,
+  process.env.MONGOD_URI ||
+    "mongodb://admin:1shinigamisan@ds351628.mlab.com:51628/cs355",
   { useNewUrlParser: true, useUnifiedTopology: true },
   () =>
     console.log("connected to port " + port + " uri " + process.env.MONGOD_URI)
