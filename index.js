@@ -21,7 +21,7 @@ router.get("/api/secret", withAuth, function (req, res) {
 const questionModel = require("./routes/question");
 const customerModel = require("./routes/customers");
 const courseModel = require("./routes/course");
-
+var MONGOD_URI = "mongodb://admin:1shinigamisan@ds237357.mlab.com:37357/game";
 app.use(bodyParser.json());
 app.use(cookieparser());
 app.use(cors());
