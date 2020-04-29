@@ -26,7 +26,7 @@ app.use(bodyParser.json());
 app.use(cookieparser());
 app.use(cors());
 mongoose.connect(
-  process.env.MONGOD_URI,
+  process.env.MONGOD_URI || MONGOD_URI,
   { useNewUrlParser: true, useUnifiedTopology: true },
   () => console.log("connected to port " + port)
 );
