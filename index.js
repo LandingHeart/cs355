@@ -30,6 +30,12 @@ const courseModel = require("./routes/course");
 app.use("/courses", courseModel);
 app.use("/questions", questionModel);
 app.use("/customers", customerModel);
+mongoose.connect(
+  process.env.MONGOD_URI,
+  { useNewUrlParser: true, useUnifiedTopology: true },
+  () =>
+    console.log("connected to port " + port + " uri " + process.env.MONGOD_URI)
+);
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("frontend/build"));
@@ -37,13 +43,7 @@ if (process.env.NODE_ENV === "production") {
 app.get("*", (req, res) => {
   res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"));
 });
-mongoose.connect(
-  process.env.MONGOD_URI ||
-    "mongodb://admin:1shinigamisan@ds351628.mlab.com:51628/cs355",
-  { useNewUrlParser: true, useUnifiedTopology: true },
-  () =>
-    console.log("connected to port " + port + " uri " + process.env.MONGOD_URI)
-);
+
 app.listen(port, () => {
   console.log(`Server running at PORT: ${port}`);
 });
