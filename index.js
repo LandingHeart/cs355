@@ -17,7 +17,6 @@ router.get("/api/secret", withAuth, function (req, res) {
 
 require("dotenv/config");
 
-
 app.use(bodyParser.json());
 app.use(cookieparser());
 app.use(cors());
@@ -39,7 +38,8 @@ app.get("*", (req, res) => {
   res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"));
 });
 mongoose.connect(
-  process.env.MONGOD_URI,
+  process.env.MONGOD_URI ||
+    "mongodb://admin:1shinigamisan@ds351628.mlab.com:51628/cs355",
   { useNewUrlParser: true, useUnifiedTopology: true },
   () => console.log("connected to port " + port)
 );
