@@ -31,7 +31,11 @@ app.use(express.static("public"));
 app.use("/courses", courseModel);
 app.use("/questions", questionModel);
 app.use("/customers", customerModel);
-
+mongoose.connect(
+  process.env.MONGOD_URI,
+  { useNewUrlParser: true, useUnifiedTopology: true },
+  () => console.log("connected to port " + port)
+);
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("frontend/build"));
 }
