@@ -23,11 +23,6 @@ const customerModel = require("./routes/customers");
 const courseModel = require("./routes/course");
 require("dotenv/config");
 
-mongoose.connect(
-  process.env.MONGOD_URI,
-  { useNewUrlParser: true, useUnifiedTopology: true },
-  () => console.log("connected to port " + port)
-);
 app.use(bodyParser.json());
 app.use(cookieparser());
 app.use(cors());
@@ -38,11 +33,12 @@ app.use("/questions", questionModel);
 app.use("/customers", customerModel);
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static("/build"));
-  app.use("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "build", "index.html"));
-  });
+  app.use(express.static("frontend/build"));
 }
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"));
+});
+
 app.listen(port, () => {
   console.log(`Server running at PORT: ${port}`);
 });
