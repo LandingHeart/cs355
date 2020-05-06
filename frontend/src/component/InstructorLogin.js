@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./form.css";
-export default class Login extends Component {
+export default class InstructorLogin extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -17,7 +17,7 @@ export default class Login extends Component {
             className="container form-content"
             style={{
               width: "30%",
-              height: "350px",
+              height: "320px",
               boxShadow: "3px 3px 5px 6px #ccc",
               marginTop: "50px",
               padding: "30px",
@@ -51,24 +51,9 @@ export default class Login extends Component {
                 className="btn btn-primary"
                 onSubmit={this.onSubmit}
               >
-                Login
+                Submit
               </button>
-              <Link
-                className="btn btn-secondary"
-                to="/register"
-                style={{ marginLeft: "20px" }}
-              >
-                Register
-              </Link>
-
-              <Link
-                className="btn btn-secondary"
-                to="/instructorLogin"
-                style={{ marginTop: "20px" }}
-              >
-                {" "}
-                Instructor Login{" "}
-              </Link>
+              <Link to="/register"> Register </Link>
             </div>
           </div>
         </form>
@@ -100,7 +85,7 @@ export default class Login extends Component {
       })
       .then((user) => {
         // this.props.setUser(user);
-        this.props.history.push("/courses");
+        this.props.history.push("/addQuestion");
 
         console.log("success");
       })

@@ -8,6 +8,7 @@ import Home from "./container/Home";
 import CoursePage from "./container/CoursePage";
 import About from "./component/About";
 import Developer from "./component/Developer";
+import InstructorLogin from "./component/InstructorLogin";
 export default class Routes extends Component {
   render() {
     return (
@@ -19,6 +20,7 @@ export default class Routes extends Component {
           <Route exact path="/developer" component={Developer}></Route>
           <Route exact path="/register" component={Register}></Route>
           <Route exact path="/addQuestion" component={AddQuestions} />
+          <Route exact path="/instructorLogin" component={InstructorLogin} />
           <Route exact path="/questions" component={DisplayQuestion}></Route>
           <Route exact path="/courses" component={CoursePage}></Route>
         </Switch>
