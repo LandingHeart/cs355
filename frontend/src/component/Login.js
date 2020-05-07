@@ -16,8 +16,8 @@ export default class Login extends Component {
           <div
             className="container form-content"
             style={{
-              width: "30%",
-              height: "350px",
+              width: "35%",
+              height: "380px",
               boxShadow: "3px 3px 5px 6px #ccc",
               marginTop: "50px",
               padding: "30px",
@@ -64,7 +64,7 @@ export default class Login extends Component {
               <Link
                 className="btn btn-secondary"
                 to="/instructorLogin"
-                style={{ marginTop: "20px" }}
+                style={{ marginLeft: "20px" }}
               >
                 {" "}
                 Instructor Login{" "}
